@@ -58,6 +58,8 @@
         
      }
 
+     
+    
     
        function getHumanChoice()
        {
@@ -109,6 +111,9 @@
 
         }
 
+
+
+
     
         
         
@@ -120,11 +125,42 @@
             alert("Your score:" + humanScore +""+"Bots score:" +computerScore);
             alert("Play Again.");
     }
+    const body =document.body;
+    const btnRock = document.createElement('button');
+    btnRock.textContent = "Rock";
+      const btnPaper = document.createElement('button');
+      btnPaper.textContent = "Paper";
+      const btnScissors = document.createElement('button');
+      btnScissors.textContent = "Scissors";
 
-        for (let i = 0; i <= 4; i++)
-        {
-        playGame();
-        }
+      btnRock.addEventListener ("click", function()
+      {
+        getHumanChoice = "rock";
+        console.log("you've entered Rock");
+      });
+
+      btnPaper.addEventListener ("click", function()
+      {
+        getHumanChoice = "Paper";
+        console.log("you've entered Paper");
+      }
+
+    );
+
+    btnScissors.addEventListener ("click", function()
+      {
+        getHumanChoice = "Scissors";
+        console.log("you've entered Scissors");
+      }
+
+    );
+
+
+     body.append(btnRock);
+     body.append(btnPaper);
+     body.append(btnScissors);
+      //  playGame(); to start the game
+    
        
     </Script>
 
