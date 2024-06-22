@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+
+
+
+    <Script>
+
+        let humanScore=0;
+        let computerScore=0;
+      
+
+      alert("Let's play Rock Paper Scissors");
+        function playGame()
+        {
+        
+        
+
+
+    
+       
+        
+
+        function getComputerChoice()
+        {
+        let x = Math.floor(Math.random()*3 + 1) ; 
+        let computerChoice; 
+
+        if (x === 1)
+        {
+            computerChoice ="rock";
+          
+        }
+        else if (x === 2)
+        {
+            computerChoice ="paper";
+            
+           
+        }
+        else if (x === 3)
+        {
+            computerChoice ="scissors";
+          
+            
+        }
+
+        return computerChoice;
+        console.log(computerChoice);
+
+    
+       
+
+        
+     }
+
+    
+       function getHumanChoice()
+       {
+        const humanChoice = prompt("Let's play Rock Paper Scissors. Pick one!").toLowerCase();
+
+        if (humanChoice ==="rock")
+        {
+           console.log("you've entered Rock");
+        } 
+        else if (humanChoice === "paper")
+        {
+            console.log("you've entered Paper");
+        }
+        else if (humanChoice === "scissors")
+        {
+            console.log("you've entered scissors");
+        }
+
+        return humanChoice;
+       }    
+
+       function playRound(humanChoice, computerChoice) 
+       {
+        
+
+        if (computerChoice===humanChoice)
+        {
+            console.log("It's a tie, bot chose " +""+ computerChoice);
+        }
+
+        else if (
+            (computerChoice === "rock" && humanChoice === "scissors") ||
+            (computerChoice === "paper" && humanChoice === "rock") ||
+            (computerChoice === "scissors" && humanChoice === "paper")
+
+        ) 
+        
+        {
+
+            console.log("You Lost! Bot Chose " + "" + computerChoice);
+            computerScore++;
+        } 
+
+        else 
+        {
+            console.log("You Won! Bot chose " +""+ computerChoice);
+            humanScore++;
+        }
+
+        }
+
+    
+        
+        
+       
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+
+            playRound(humanSelection, computerSelection);
+            alert("Your score:" + humanScore +""+"Bots score:" +computerScore);
+            alert("Play Again.");
+    }
+
+        for (let i = 0; i <= 4; i++)
+        {
+        playGame();
+        }
+       
+    </Script>
+
+
+
+
+
+</body>
+</html>
